@@ -1,0 +1,12 @@
+{
+    "workbench.colorTheme": "Atom One Dark",
+    "workbench.preferredDarkColorTheme": "Atom One Dark",
+    "workbench.preferredHighContrastColorTheme": "Monokai",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.tips.enabled": false,
+    "editor.suggest.showStatusBar": true,
+    "zenMode.restore": false,
+    "codesnap.showWindowTitle": true,
+    "dart.devToolsBrowser": "default",
+    "debug.openDebug": "neverOpen"
+}
