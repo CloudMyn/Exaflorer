@@ -10,7 +10,6 @@ class DirectoryActionBloc
     extends Bloc<DirectoryActionEvent, DirectoryActionState> {
   DirectoryActionBloc() : super(InitialState());
 
-  @override
   Stream<DirectoryActionState> mapEventToState(
       DirectoryActionEvent event) async* {
     yield LoadingState();
@@ -135,14 +134,8 @@ class DirectoryActionBloc
       yield SuccessOnDelete('success: $name berhasil dihapus');
 
       // ...
-    } on IsolateException catch (e) {
-      String msg = "isolate-error: terdapat kesalahan dalam eksekusi isolate";
-
-      yield ErrorOnDelete(e.normalize(msg));
-    } on StorageError catch (e) {
-      String msg = "storage-error: gagal menghapus $name";
-
-      yield ErrorOnDelete(e.normalize(msg));
+    } on Exception {
+      yield ErrorOnDelete("isolate-error: terdapat kesalahan dalam eksekusi isolate");
     } catch (e) {
       String msg = "unexpected-error: gagal menghapus $name";
 

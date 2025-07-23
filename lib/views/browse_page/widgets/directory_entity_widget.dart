@@ -132,7 +132,7 @@ abstract class DirectoryEntityWidget extends StatelessWidget {
   }
 
   Color tileColor() {
-    return isSelected ? Colors.grey.shade200.withOpacity(0.6) : Colors.white;
+    return isSelected ? Colors.grey.shade200.withAlpha(153) : Colors.white;
   }
 
   // Tile leading

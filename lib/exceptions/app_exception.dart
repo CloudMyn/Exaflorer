@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:filemanager/bootstrap.dart';
 import 'package:filemanager/models/_models.dart';
 import 'package:filemanager/utils/log_handler.dart';

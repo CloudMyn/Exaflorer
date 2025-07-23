@@ -2,10 +2,8 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:filemanager/bootstrap.dart';
-import 'package:filemanager/extentions/_extentions.dart';
 import 'package:filemanager/models/_models.dart';
 import 'package:filemanager/providers/isolate_provider.dart';
-import 'package:path_provider/path_provider.dart';
 
 class LogHandler {
   /// method for logging given error exception,
@@ -83,7 +81,7 @@ class LogHandler {
       return jsonDecode(content) as List<dynamic>;
 
       // ...
-    } on NullThrownError catch (e, s) {
+    } on Exception catch (e, s) {
       throw FileException('Gagal mendapatkan log file', s);
     } catch (e, _) {
       return Future.value([]);

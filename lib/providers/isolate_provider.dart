@@ -1,5 +1,4 @@
 import 'dart:isolate';
-import 'package:filemanager/bootstrap.dart';
 
 class IsolateService {
   final ReceivePort receivePort;
@@ -55,7 +54,7 @@ class IsolateService {
 
       if (data is List) msg = data[0].toString();
 
-      throw IsolateException(msg, stackTrace: StackTrace.current);
+      throw Exception(msg);
     }
   }
 

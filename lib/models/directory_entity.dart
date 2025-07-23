@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:filemanager/bootstrap.dart';
-import 'package:filemanager/providers/isolate_provider.dart';
 import 'package:filemanager/utils/byte_convertion.dart';
 
 @immutable

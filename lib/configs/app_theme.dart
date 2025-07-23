@@ -6,18 +6,16 @@ ThemeData appTheme() {
   // - Text theme -
   // note: headline(1-6) sama dengan h1-h6 di web
   TextTheme textTheme = TextTheme(
-    headline6: TextStyle(
+    titleLarge: TextStyle(
       color: AppColors.titleColor1,
       fontSize: 19,
       fontWeight: FontWeight.w600,
     ),
-    headline5: TextStyle(color: AppColors.titleColor2, fontSize: 17),
-    headline4: TextStyle(color: AppColors.titleColor3, fontSize: 15),
-    headline3: TextStyle(color: AppColors.titleColor3, fontSize: 13),
-    headline2: TextStyle(color: AppColors.titleColor3, fontSize: 12),
-    headline1: TextStyle(color: AppColors.titleColor3, fontSize: 11),
-    subtitle1: TextStyle(color: AppColors.titleColor3, fontSize: 14),
-    subtitle2: TextStyle(color: AppColors.titleColor4, fontSize: 13),
+    titleMedium: TextStyle(color: AppColors.titleColor2, fontSize: 17),
+    titleSmall: TextStyle(color: AppColors.titleColor3, fontSize: 15),
+    bodyLarge: TextStyle(color: AppColors.titleColor3, fontSize: 14),
+    bodyMedium: TextStyle(color: AppColors.titleColor4, fontSize: 13),
+    bodySmall: TextStyle(color: AppColors.titleColor3, fontSize: 11),
   );
 
   // -- Icon theme --
@@ -30,7 +28,6 @@ ThemeData appTheme() {
     appBarTheme: AppBarTheme(
       elevation: 1,
       backgroundColor: AppColors.appBarColor1,
-      textTheme: textTheme,
       iconTheme: iconTheme,
       actionsIconTheme: iconTheme,
     ),
@@ -45,15 +42,15 @@ ThemeData appThemeDark() {
 
   // Text theme
   TextTheme textTheme = TextTheme(
-    headline6: TextStyle(
+    titleLarge: TextStyle(
       color: AppColors.titleColor1,
       fontSize: 19,
       fontWeight: FontWeight.w600,
     ),
-    headline5: TextStyle(color: AppColors.titleColor2),
-    headline4: TextStyle(color: AppColors.titleColor3),
-    subtitle1: TextStyle(color: AppColors.titleColor3),
-    subtitle2: TextStyle(color: AppColors.titleColor4),
+    titleMedium: TextStyle(color: AppColors.titleColor2),
+    titleSmall: TextStyle(color: AppColors.titleColor3),
+    bodyLarge: TextStyle(color: AppColors.titleColor3),
+    bodyMedium: TextStyle(color: AppColors.titleColor4),
   );
 
   return ThemeData(
@@ -62,7 +59,6 @@ ThemeData appThemeDark() {
     appBarTheme: AppBarTheme(
       elevation: 1,
       backgroundColor: AppColors.appBarColor1,
-      textTheme: textTheme,
       titleTextStyle: TextStyle(color: AppColors.titleColor1),
       iconTheme: IconThemeData(color: AppColors.iconColor),
     ),

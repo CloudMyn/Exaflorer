@@ -1,4 +1,4 @@
-import 'package:units_converter/DigitalData.dart';
+import 'package:units_converter/units_converter.dart';
 
 /// ByteConvertion merupakan class yang
 /// menyediakan metode/fungsi untuk mengubah
@@ -15,62 +15,52 @@ class ByteConvertion {
   });
 
   static ByteConvertion byteToKilobyte(double byte) {
-    DigitalData dg = new DigitalData(significantFigures: 3);
-
-    dg.convert(DIGITAL_DATA.byte, byte);
-
+    var convertedValue =
+        byte.convertFromTo(DIGITAL_DATA.byte, DIGITAL_DATA.kilobyte);
     return new ByteConvertion(
-      value: dg.kilobyte.value ?? 0,
-      symbValue: "${dg.kilobyte.stringValue}KB",
-      symbol: dg.kilobyte.symbol ?? 'undifined',
+      value: convertedValue ?? 0,
+      symbValue: "${convertedValue}KB",
+      symbol: 'KB',
     );
   }
 
   static ByteConvertion byteToMegabyte(double byte) {
-    DigitalData dg = new DigitalData(significantFigures: 3);
-
-    dg.convert(DIGITAL_DATA.byte, byte);
-
+    var convertedValue =
+        byte.convertFromTo(DIGITAL_DATA.byte, DIGITAL_DATA.megabyte);
     return new ByteConvertion(
-      value: dg.megabyte.value ?? 0,
-      symbValue: "${dg.megabyte.stringValue}MB",
-      symbol: dg.megabyte.symbol ?? 'undifined',
+      value: convertedValue ?? 0,
+      symbValue: "${convertedValue}MB",
+      symbol: 'MB',
     );
   }
 
   static ByteConvertion byteToGigabyte(double byte) {
-    DigitalData dg = new DigitalData(significantFigures: 3);
-
-    dg.convert(DIGITAL_DATA.byte, byte);
-
+    var convertedValue =
+        byte.convertFromTo(DIGITAL_DATA.byte, DIGITAL_DATA.gigabyte);
     return new ByteConvertion(
-      value: dg.gigabyte.value ?? 0,
-      symbValue: "${dg.gigabyte.stringValue}GB",
-      symbol: dg.gigabyte.symbol ?? 'undifined',
+      value: convertedValue ?? 0,
+      symbValue: "${convertedValue}GB",
+      symbol: 'GB',
     );
   }
 
   static ByteConvertion byteToTerabyte(double byte) {
-    DigitalData dg = new DigitalData(significantFigures: 3);
-
-    dg.convert(DIGITAL_DATA.byte, byte);
-
+    var convertedValue =
+        byte.convertFromTo(DIGITAL_DATA.byte, DIGITAL_DATA.terabyte);
     return new ByteConvertion(
-      value: dg.terabyte.value ?? 0,
-      symbValue: "${dg.terabyte.stringValue}GB",
-      symbol: dg.terabyte.symbol ?? 'undifined',
+      value: convertedValue ?? 0,
+      symbValue: "${convertedValue}TB",
+      symbol: 'TB',
     );
   }
 
   static ByteConvertion megabyteToGigabyte(double megabyte) {
-    DigitalData dg = new DigitalData(significantFigures: 3);
-
-    dg.convert(DIGITAL_DATA.megabyte, megabyte);
-
+    var convertedValue =
+        megabyte.convertFromTo(DIGITAL_DATA.megabyte, DIGITAL_DATA.gigabyte);
     return new ByteConvertion(
-      value: dg.gigabyte.value ?? 0,
-      symbValue: "${dg.gigabyte.stringValue}GB",
-      symbol: dg.gigabyte.symbol ?? 'undifined',
+      value: convertedValue ?? 0,
+      symbValue: "${convertedValue}GB",
+      symbol: 'GB',
     );
 
     // ...
