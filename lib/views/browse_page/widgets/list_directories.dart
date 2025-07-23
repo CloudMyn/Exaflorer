@@ -49,22 +49,27 @@ class ListDirectories extends StatelessWidget {
           pathBloc.add(RefreshPath(pathState.paths));
         }
       },
-      child: WillPopScope(
-        onWillPop: () async {
+      child: PopScope(
+        canPop: false,
+        onPopInvoked: (didPop) async {
+          if (didPop) {
+            return;
+          }
           if (selectPath is SelectedDirectory) {
             // Cancel selection directory
             selectBloc.add(CancelSelection());
 
-            return await Future.value(false);
+            return;
           }
 
           // jika masih di dlm root storage langsung popup saja
-          if (pathState.paths.length == 1) return await Future.value(true);
+          if (pathState.paths.length == 1) {
+            Navigator.of(context).pop();
+            return;
+          }
 
           // Remove last path from paths
           pathBloc.add(PopLastPath(pathState.paths));
-
-          return await Future.value(false);
         },
         child: ListView.builder(
           itemCount: dirs.length,

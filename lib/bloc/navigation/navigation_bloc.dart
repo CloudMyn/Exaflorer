@@ -12,7 +12,6 @@ part 'navigationbloc_state.dart';
 class NavigationBloc extends Bloc<NavigationblocEvent, NavigationblocState> {
   NavigationBloc() : super(InitialNavigationState());
 
-  @override
   Stream<NavigationblocState> mapEventToState(
     NavigationblocEvent event,
   ) async* {

@@ -6,7 +6,6 @@ class DirectorySelectBloc
     extends Bloc<DirectorySelectEvent, DirectorySelectState> {
   DirectorySelectBloc() : super(DirectorySelectInitial());
 
-  @override
   Stream<DirectorySelectState> mapEventToState(
       DirectorySelectEvent event) async* {
     if (event is SelectDirectoryItem) {

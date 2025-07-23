@@ -168,7 +168,7 @@ class DirectoryEntityFacade {
       rethrow;
     } on FileAlreadyExist {
       rethrow;
-    } on IsolateException {
+    } on Exception {
       rethrow;
     } catch (e, s) {
       throw CoreException(e.toString(), stackTrace: s);

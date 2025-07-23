@@ -13,7 +13,6 @@ class DirectoryPathBloc extends Bloc<DirectoryPathEvent, DirectoryPathState> {
 
   DirectoryPathBloc() : super(DirectoryPathBloc.defState);
 
-  @override
   Stream<DirectoryPathState> mapEventToState(
     DirectoryPathEvent event,
   ) async* {

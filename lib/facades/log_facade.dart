@@ -25,7 +25,7 @@ class LogFacade {
       ));
       return false;
       // ...
-    } catch (e, s) {
+    } catch (e) {
       scfld.showSnackBar(SnackBar(
         content: Text(e.toString()),
       ));
